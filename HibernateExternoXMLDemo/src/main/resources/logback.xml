@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<!-- Configuracion de un appener -->
+	<!-- appener es un componente que define la salida de los registros-->
+	<!-- En este caso le indicamos que es por consola-->
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+        <!-- Esto imprime en formato de y/m/d %el mensaje %salto de linea-->
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} - %msg%n</pattern>
+        </encoder>
+    </appender>
+    
+    <!-- Logger de nivel DEBUG para Hibernate -->
+    <!-- sirve para ver los detalles del hibernate-->
+    <!-- level debug muestra los registros de nivel debug y superior(info, warn y error) incluyen las consultad sql-->
+    <logger name="org.hibernate" level="debug"/>
+    
+    <!-- Root Logger -->
+    <!-- captura todos los mensajes que no son capturados-->
+    <root level="info"> <!--muestra solo los mensajes de tipo info, warn y error, pero no el debug -->
+       	<!-- Hacemos referencia a la salida en consola para que sea mostrado-->
+        <appender-ref ref="STDOUT"/>
+    </root>
+</configuration>
+

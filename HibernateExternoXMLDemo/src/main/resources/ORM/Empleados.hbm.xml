@@ -1,0 +1,16 @@
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+ <hibernate-mapping>
+ 	<!-- Especifiacamos la clase empleados-->
+ 	<class name="Empleado" table="empleado">
+ 		<id name="id" column="id">
+ 			<generator class="increment"/>
+ 		</id>
+ 		<!-- Mapea el atributo nombre del bean a la columna nombre de la tabla-->
+ 		<property name="nombre" column="nombre" type="string"/>
+ 		<!-- Mapea el atributo edad del bean a la columna edad en la tabla-->
+ 		<property name="edad" column="edad" type="integer"/>
+ 		<!-- Mapea el atributo puesto del bean a la tabla-->
+ 		<property name="puesto" column="puesto" type="string"/>
+ 	</class>
+ </hibernate-mapping>

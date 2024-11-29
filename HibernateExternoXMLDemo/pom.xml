@@ -1,0 +1,46 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>Dam2</groupId>
+  <artifactId>ConfiguracionPorCodigo</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+<dependencies>
+	<dependency>
+		<groupId>org.hibernate.orm</groupId>
+    	<artifactId>hibernate-core</artifactId>
+    	<version>6.6.3.Final</version>
+	</dependency>
+	<dependency>
+	    <groupId>com.mysql</groupId>
+    	<artifactId>mysql-connector-j</artifactId>
+    	<version>9.1.0</version>
+	</dependency>
+    <!-- JPA para las anotaciones-->
+	<dependency>
+        <groupId>jakarta.persistence</groupId>
+        <artifactId>jakarta.persistence-api</artifactId>
+        <version>3.1.0</version>
+    </dependency>
+    <!-- SLF4J API Interfaz común para logging que permite a la aplicación registrar mensajes sin preocuparse por la implementación concreta de logging. -->
+    <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-api</artifactId>
+        <version>2.0.0</version>
+    </dependency>
+    <!-- Logback (implementación de SLF4J)Implementación concreta de logging para SLF4J, que maneja la salida de los logs en consola o archivos. -->
+    <!-- tambien ofrece caracteristicas como filtrado de registros, almacenamiento en archivos de registro rotativos, etc-->
+    <!--  ejemplo, si en tu código usas logger.info("Mensaje"), Logback manejará cómo y dónde se muestra ese mensaje -->
+    <dependency>
+        <groupId>ch.qos.logback</groupId>
+        <artifactId>logback-classic</artifactId>
+        <version>1.4.8</version>
+    </dependency>
+    <!-- SLF4J binding para Log4j -->
+    <!-- Permite que las bibliotecas basadas en Log4j utilicen SLF4J para el registro.-->
+    <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>log4j-over-slf4j</artifactId>
+        <version>1.7.30</version>
+    </dependency>
+    <!--  es una buena práctica incluirla si no tienes claro si algunas de las dependencias internas pueden usar Log4j.-->
+</dependencies>
+</project>
